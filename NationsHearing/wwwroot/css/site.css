@@ -1,0 +1,473 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+}
+
+.footer {
+    /* position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+     Set the fixed height of the footer here 
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.body_section {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header_right {
+    display: flex;
+}
+
+.header_right_options {
+    margin-left: 20px;
+    align-self: center;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border: none;
+    border-bottom: 1px solid #b2b2be;
+    outline: none;
+    color: #424242;
+    font-size: 16px;
+}
+
+.header_logo {
+    width: 100px;
+    height: 42px;
+    border-right: 1px solid #b2b2b2;
+}
+
+.header_menu {
+    display: flex;
+    align-items: center;
+}
+
+.header_menu_item {
+    margin: 0px 15px;
+}
+
+.header_container {
+    padding: 28px 30px 17px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 6px 18px #D0D0D1
+}
+
+.bell::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #f75a3c;
+    position: absolute;
+}
+
+.main_container {
+    padding-left: 25px;
+    padding-bottom: 33px;
+    padding-top: 20px;
+    background: rgb(243, 243, 244);
+    margin-top: 10px;
+}
+
+.calendar_section {
+    width: 654px;
+    background: #ffffff;
+    margin-top: 15px;
+}
+
+.calendar_header {
+    margin-top: 16px;
+    padding-left: 23px;
+    display: flex
+}
+
+.calendar_header_month {
+    color: #186b92;
+    font-size: 22px;
+    text-align: left;
+    padding-right: 6px;
+}
+
+.calendar_header_year {
+    color: #444343;
+}
+
+.calendar_days {
+    display: flex;
+    width: 100%;
+    padding: 0px 22px;
+    color: #797979;
+    font-size: 14px;
+}
+
+.calendar_days_individual {
+    width: calc(100%/7);
+    text-transform: capitalize;
+}
+
+.calendar_days_individual_date {
+    width: calc(100%/7);
+    border-right: 1px solid rgba(198, 198, 198, 0.5);
+    border-bottom: 1px solid rgba(198, 198, 198, 0.5);
+    padding: 9px 0px 0px 9px;
+}
+
+.calendar_dates {
+    height: 457px;
+    display: flex;
+    flex-direction: column;
+    margin: 2px 22px 0px;
+    border-top: 1px solid rgba(198, 198, 198, 0.5);
+    color: #2f2f2f;
+    font-size: 14px;
+}
+
+.calendar_dates_row {
+    display: flex;
+    flex-direction: row;
+    height: calc(100%/5);
+}
+
+    .calendar_dates_row :last-child {
+        border-right: none;
+    }
+
+.not_current {
+    color: #797979;
+}
+
+.schedule_section {
+    margin-left: 40px;
+    width: calc((100%/2) - 40px);
+}
+
+.schedule_section_title {
+    color: #1f1f20;
+    font-size: 20px;
+}
+
+.schedule_section_body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.schedule_section_body__individual {
+    /*height: 108px;*/
+    width: 139px;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 10px;
+}
+
+    .schedule_section_body__individual::before {
+        content: "";
+        height: 100%;
+        width: 1px;
+        background-color: #b2b2b2;
+        position: absolute;
+        left: 0px;
+    }
+
+label {
+    margin-bottom: 0px;
+}
+
+.schedule_section_body__individual_time {
+    color: #3c3c3c;
+    font-size: 13px;
+    position: relative;
+}
+
+    .schedule_section_body__individual_time::after {
+        content: "";
+        height: 5px;
+        width: 28px;
+        background-color: rgba(244, 91, 60, 0.6);
+        position: absolute;
+        bottom: -1px;
+        left: 2px;
+    }
+
+.schedule_section_body__individual_name {
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.schedule_section_body__individual-number_type {
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+.schedule_section_body__individual_image {
+    margin-top: 10px;
+    margin-top: 10px;
+}
+
+.schedule_section_body__individual_add {
+    color: #1868df;
+    width: 10px;
+    height: 10px;
+}
+
+.schedule_section_body__individual_appointment {
+    color: #1868df;
+}
+
+.schedule_section_body__individual_newappointment {
+    position: absolute;
+    bottom: 0px;
+}
+
+.calendar_legends {
+    color: #444343;
+    font-size: 14px;
+    padding: 14px 22px 21px;
+    display: flex;
+    align-items: baseline;
+}
+
+.calendar_legends_img {
+    padding-right: 4px;
+}
+
+.calendar_legends_label {
+    padding-right: 20px;
+}
+
+.tips_suggestions_section {
+    border-radius: 5px;
+    background: -webkit-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
+    background: -moz-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
+    background: -o-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
+    background: -ms-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
+    background: linear-gradient(0deg, #30a498 0%, #22d4ba 100%);
+    width: 650px;
+    height: 362px;
+    margin-top: 28px;
+    position: relative;
+    padding : 19px;
+}
+
+.tips_suggestions_img {
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+}
+
+.clinic_statistics {
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 163px;
+}
+
+.clinic_statistics_header {
+    padding: 20px 0px 0px 20px;
+    margin-bottom: 35px;
+}
+
+.clinic_statistics_header_label {
+    padding-right: 20px;
+    color: #1f1f20;
+    font-size: 20px;
+}
+
+.clinic_statistics_header_select {
+    color: #444343;
+    font-size: 14px;
+}
+
+.clinic_statistics_body {
+    display: flex;
+    flex-direction: row;
+}
+
+.clinic_statistics_body_individual {
+    width: calc(100% /3);
+}
+
+    .clinic_statistics_body_individual:first-child {
+        padding-left: 21px;
+    }
+
+    .clinic_statistics_body_individual:not(:first-child) {
+        padding-left: 30px;
+        position: relative;
+    }
+
+        .clinic_statistics_body_individual:not(:first-child):before {
+            content: "";
+            background-color: rgba(112, 112, 112, 0.5);
+            width: 1px;
+            height: 39px;
+            position: absolute;
+            left: 0px;
+            top: calc((100% - 39px)/2);
+        }
+
+.clinic_statistics_body_individual_number {
+    color: #eb720c;
+    font-size: 32px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.clinic_statistics_body_individual_type {
+    color: #1f1f20;
+}
+
+.statics_updates {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+    margin-left: 21px;
+}
+
+.news {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.news_new_product {
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 211px;
+    height: 176px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 14px 12px;
+    color: #1f1f20;
+}
+.news_new_product_month{
+
+}
+.news_new_product_launched {
+}
+
+.news_available {
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 205px;
+    height: 176px;
+    margin-left: 10px;
+    padding-left: 14px;
+    padding-top: 35px;
+}
+
+.news_section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 46px;
+    margin-left: 20px;
+}
+
+.news_section_header {
+    color: #444343;
+    font-size: 26px;
+    width: 91px;
+    height: 71px;
+    margin-top: 27px;
+    line-height: 26px;
+}
+
+.news_section_view_all {
+    color: #18a0df;
+    font-size: 16px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.news_available_view {
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #18a0df;
+    border-style: solid;
+    background-color: #ffffff;
+    width: 64px;
+    height: 34px;
+    outline: none;
+    color: #18a0df;
+    margin-top: 13px;
+    cursor: pointer;
+}
+.news_available_desc {
+    line-height: 20px;
+}
+.tips_suggestions_header {
+    color: #444343;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 26px;
+    width: 117px;
+    margin-bottom: 8px;
+}
+.tips_suggestions_desc {
+    color: #444343;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.tips_suggestions_list{
+    display : flex;
+    flex-direction : column;
+    color: #ffffff;
+    font-size: 16px;
+}
+.tips_suggestions_list_individual {
+    padding-left: 11px;
+    position: relative;
+    margin-bottom: 10px;
+}
+    .tips_suggestions_list_individual::before {
+        content: "";
+        background-color: #178d7c;
+        width: 3px;
+        height: 18px;
+        position: absolute;
+        left: 0px;
+        top: 3px;
+    }
+.tips_suggestions_list_individual_desc {
+    margin-bottom: 7px;
+    position: relative;
+}
+    .tips_suggestions_list_individual_action {
+        border-radius: 5px;
+        background-color: rgba(242, 242, 242, 0.4);
+        width: 149px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 21px;
+    }
+.tips_suggestions_list_individual_action:last-child{
+    margin-bottom : 0px;
+}
+.tips_suggestions_list_individual_action_button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}

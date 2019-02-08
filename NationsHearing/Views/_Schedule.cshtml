@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Home page";
+
+    Dictionary<string, string> member = new Dictionary<string, string>{
+{ "time", "12:00" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testng" }
+};
+}
+<div class="schedule_section">
+    <div class="schedule_section_title">Todays's Schedule</div>
+    <div class="schedule_section_body">
+        <div class="schedule_section_body__individual">
+            <label class="schedule_section_body__individual_time">12:30 PM</label><br />
+            @*<img class="schedule_section_body__individual_image" src="~/images/brown_jay.png" /><br />
+                <label class="schedule_section_body__individual_name">ABC</label><br />
+                <label class="schedule_section_body__individual-number_type">123</label> |
+                <label class="schedule_section_body__individual-number_type">Testing</label>*@
+            <div class="schedule_section_body__individual_newappointment">
+                <label class="schedule_section_body__individual_add">+</label><br />
+                <label class="schedule_section_body__individual_appointment">New Appointment</label>
+            </div>
+        </div>
+        @for (var i = 1; i < 10; i++)
+        {
+            <div class="schedule_section_body__individual">
+                <label class="schedule_section_body__individual_time">12:30 PM</label><br />
+                <img class="schedule_section_body__individual_image" src="~/images/brown_jay.png" /><br />
+                <label class="schedule_section_body__individual_name">ABC</label><br />
+                <label class="schedule_section_body__individual-number_type">123</label> |
+                <label class="schedule_section_body__individual-number_type">Testing</label>
+            </div>
+        }
+    </div>
+</div>
