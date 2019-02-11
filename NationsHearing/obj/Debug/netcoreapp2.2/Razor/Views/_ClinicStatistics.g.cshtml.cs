@@ -23,8 +23,13 @@ using NationsHearing.Models;
 
 #line default
 #line hidden
+#line 4 "C:\Users\varalakshmi\source\repos\NationsHearing\NationsHearing\Views\_ViewImports.cshtml"
+using Kendo.Mvc.UI;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"90b07dffcf3bd9794b99e3d8ff71c6987edca8a7", @"/Views/_ClinicStatistics.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5bbe724fd8c5ce8125483a39a48a655e4ad2f357", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9c3f064581e33df5fcc9cc4e5b0c0706d4558807", @"/Views/_ViewImports.cshtml")]
     public class Views__ClinicStatistics : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -53,7 +58,7 @@ using NationsHearing.Models;
             WriteLiteral("\r\n<div class=\"clinic_statistics\">\r\n    <div class=\"clinic_statistics_header\">\r\n        <label class=\"clinic_statistics_header_label\">Clinic Stats</label>\r\n        <select class=\"clinic_statistics_header_select\">\r\n            ");
             EndContext();
             BeginContext(345, 26, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90b07dffcf3bd9794b99e3d8ff71c6987edca8a73496", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90b07dffcf3bd9794b99e3d8ff71c6987edca8a73649", async() => {
                 BeginContext(353, 9, true);
                 WriteLiteral("This Week");
                 EndContext();
@@ -73,7 +78,7 @@ using NationsHearing.Models;
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(385, 26, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90b07dffcf3bd9794b99e3d8ff71c6987edca8a74684", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90b07dffcf3bd9794b99e3d8ff71c6987edca8a74837", async() => {
                 BeginContext(393, 9, true);
                 WriteLiteral("Last Week");
                 EndContext();

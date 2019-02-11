@@ -23,8 +23,13 @@ using NationsHearing.Models;
 
 #line default
 #line hidden
+#line 4 "C:\Users\varalakshmi\source\repos\NationsHearing\NationsHearing\Views\_ViewImports.cshtml"
+using Kendo.Mvc.UI;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"86afbd65b5cd982197bbc8e147bf44708dd6e265", @"/Views/_TipsAndSuggestions.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5bbe724fd8c5ce8125483a39a48a655e4ad2f357", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9c3f064581e33df5fcc9cc4e5b0c0706d4558807", @"/Views/_ViewImports.cshtml")]
     public class Views__TipsAndSuggestions : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("tips_suggestions_img"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -58,7 +63,7 @@ using NationsHearing.Models;
             WriteLiteral("<div class=\"tips_suggestions_section\">\r\n    ");
             EndContext();
             BeginContext(174, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "86afbd65b5cd982197bbc8e147bf44708dd6e2654165", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "86afbd65b5cd982197bbc8e147bf44708dd6e2654318", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

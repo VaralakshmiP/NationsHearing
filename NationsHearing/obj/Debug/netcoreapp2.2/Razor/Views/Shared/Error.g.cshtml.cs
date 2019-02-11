@@ -23,8 +23,13 @@ using NationsHearing.Models;
 
 #line default
 #line hidden
+#line 4 "C:\Users\varalakshmi\source\repos\NationsHearing\NationsHearing\Views\_ViewImports.cshtml"
+using Kendo.Mvc.UI;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5bbe724fd8c5ce8125483a39a48a655e4ad2f357", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9c3f064581e33df5fcc9cc4e5b0c0706d4558807", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

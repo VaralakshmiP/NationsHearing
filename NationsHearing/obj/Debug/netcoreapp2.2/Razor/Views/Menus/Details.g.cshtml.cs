@@ -23,8 +23,13 @@ using NationsHearing.Models;
 
 #line default
 #line hidden
+#line 4 "C:\Users\varalakshmi\source\repos\NationsHearing\NationsHearing\Views\_ViewImports.cshtml"
+using Kendo.Mvc.UI;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7aabbf7e5e0cf5f7b5c35ded041b2e54599f11c4", @"/Views/Menus/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5bbe724fd8c5ce8125483a39a48a655e4ad2f357", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9c3f064581e33df5fcc9cc4e5b0c0706d4558807", @"/Views/_ViewImports.cshtml")]
     public class Views_Menus_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<NationsHearing.Models.Menu>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Edit", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -104,7 +109,7 @@ using NationsHearing.Models;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(608, 54, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7aabbf7e5e0cf5f7b5c35ded041b2e54599f11c45979", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7aabbf7e5e0cf5f7b5c35ded041b2e54599f11c46132", async() => {
                 BeginContext(654, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -139,7 +144,7 @@ using NationsHearing.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(670, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7aabbf7e5e0cf5f7b5c35ded041b2e54599f11c48308", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7aabbf7e5e0cf5f7b5c35ded041b2e54599f11c48461", async() => {
                 BeginContext(692, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

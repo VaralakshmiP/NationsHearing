@@ -4,36 +4,190 @@
 @{
     ViewData["Title"] = "Home page";
 
+    List<Dictionary<string,string>> memberList = new List<Dictionary<string, string>>();
     Dictionary<string, string> member = new Dictionary<string, string>{
-{ "time", "12:00" },
+{ "time", "09:00 AM" },
 { "name", "abc" },
 {"number" ,"123" },
-{"type", " Testng" }
+{"type", " Testing" },
+{"image_url", "brown_jay.png"},
+        {"status", "booked" }
 };
-}
-<div class="schedule_section">
-    <div class="schedule_section_title">Todays's Schedule</div>
-    <div class="schedule_section_body">
-        <div class="schedule_section_body__individual">
-            <label class="schedule_section_body__individual_time">12:30 PM</label><br />
-            @*<img class="schedule_section_body__individual_image" src="~/images/brown_jay.png" /><br />
-                <label class="schedule_section_body__individual_name">ABC</label><br />
-                <label class="schedule_section_body__individual-number_type">123</label> |
-                <label class="schedule_section_body__individual-number_type">Testing</label>*@
-            <div class="schedule_section_body__individual_newappointment">
-                <label class="schedule_section_body__individual_add">+</label><br />
-                <label class="schedule_section_body__individual_appointment">New Appointment</label>
-            </div>
-        </div>
-        @for (var i = 1; i < 10; i++)
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "09:30 AM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient1.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "10:00 AM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient2.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "10:30 AM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient3.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "11:00 AM" },
+        {"status", "not booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+    { "time", "11:00 AM" },
+        {"status", "lunch time" }
+};
+    member = new Dictionary<string, string>{
+{ "time", "12:30 PM" },
+        {"status", "lunch time" }
+};
+    member = new Dictionary<string, string>{
+{ "time", "01:00 PM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient4.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "01:30 PM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient5.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>
+    {
+    { "time", "01:30 PM" },
+        {"status", "not booked" }
+    };
+    memberList.Add(member);
+
+    member = new Dictionary<string, string>
         {
-            <div class="schedule_section_body__individual">
-                <label class="schedule_section_body__individual_time">12:30 PM</label><br />
-                <img class="schedule_section_body__individual_image" src="~/images/brown_jay.png" /><br />
-                <label class="schedule_section_body__individual_name">ABC</label><br />
-                <label class="schedule_section_body__individual-number_type">123</label> |
-                <label class="schedule_section_body__individual-number_type">Testing</label>
+        { "time", "01:30 PM" },
+        { "name", "abc" },
+        {"number" ,"123" },
+        {"type", " Testing" },
+        {"image_url", "patient6.png"},
+        {"status", "booked" }
+        };
+    memberList.Add(member);
+    member = new Dictionary<string, string>
+            {
+            { "time", "01:30 PM" },
+        {"status", "not booked" }
+            };
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "02:00 PM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "brown_jay.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "02:30 PM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient1.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "03:00 PM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient2.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", "03:30 PM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient3.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+{ "time", ")4:00 PM" },
+        {"status", "not booked" }
+};
+    memberList.Add(member);
+    member = new Dictionary<string, string>{
+    { "time", "04:30 PM" },
+        {"status", "lunch time" }
+};
+    member = new Dictionary<string, string>{
+{ "time", ")5:30 PM" },
+        {"status", "lunch time" }
+};
+    member = new Dictionary<string, string>{
+{ "time", "05:00 PM" },
+{ "name", "abc" },
+{"number" ,"123" },
+{"type", " Testing" },
+{"image_url", "patient4.png"},
+        {"status", "booked" }
+};
+    memberList.Add(member);
+
+            }
+            <div class="schedule_section">
+                <div class="schedule_section_title">Todays's Schedule</div>
+                <div class="schedule_section_body">
+
+                    @foreach (var eachMember in memberList)
+                    {
+                        @if (eachMember["status"] == "not booked")
+                        {
+                            <div class="schedule_section_body__individual">
+                                <label class="schedule_section_body__individual_time-free">@member["time"]</label><br />
+                                <div class="schedule_section_body__individual_newappointment">
+                                    <label class="schedule_section_body__individual_add">+</label><br />
+                                    <label class="schedule_section_body__individual_appointment">New Appointment</label>
+                                </div>
+                            </div>
+                        }
+                        else if (eachMember["status"] == "lunch time")
+                        {
+                            <div class="schedule_section_body__individual">
+                                <label class="schedule_section_body__individual_time-free">@member["time"]</label><br />
+                                <label class="schedule_section_body__individual_appointment-lunch">Out of Office</label>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="schedule_section_body__individual">
+                                <label class="schedule_section_body__individual_time">@eachMember["time"]</label><br />
+                                <img class="schedule_section_body__individual_image" src="~/images/@eachMember["image_url"]" /><br />
+                                <label class="schedule_section_body__individual_name">@eachMember["name"]</label><br />
+                                <label class="schedule_section_body__individual-number_type">@eachMember["number"]</label> |
+                                <label class="schedule_section_body__individual-number_type">@eachMember["type"]</label>
+                            </div>
+                        }
+                    }
+                </div>
             </div>
-        }
-    </div>
-</div>

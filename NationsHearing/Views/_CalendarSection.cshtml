@@ -3,41 +3,300 @@
 *@
 @{
     string[] days = { "sun", "mon", "tue", "wed", "thurs", "fri", "sat" };
-    int date = 0;
-}
-<div class="calendar_section">
-    <div class="calendar_header">
-        <div class="calendar_header_month">
-            November
-        </div>
-        <div class="calendar_header_year">
-            <select>
-                <option>2018</option>
-                <option>2019</option>
-            </select>
-        </div>
-    </div>
-    <div class="calendar_days">
-        @foreach (var day in days)
-        {
-            <div class="calendar_days_individual"> @day </div>
-        }
-    </div>
-    <div class="calendar_dates">
-        @for (var i = 1; i < 6; i++)
-        {
-            <div class="calendar_dates_row">
-                @for (var j = 1; j < 8; j++)
-                {
-                    date = date + 1;
-                    <div class="calendar_days_individual_date @Html.Raw((date > 31) ? "not_current" : "")">@date</div>
-                }
+
+    List<Dictionary<string, string>> cellList = new List<Dictionary<string, string>>();
+    Dictionary<string, string> cell = new Dictionary<string, string>{
+        { "day", "31" },
+        { "style", "grey" },
+        {"status" ,"" },
+        {"desc", "" }
+        };
+    cellList.Add(cell);
+    cell = new Dictionary<string, string>{
+        { "day", "01" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "Thanks Giving" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "02" },
+        { "style", "white" },
+        {"status" ,"available" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "03" },
+        { "style", "white" },
+        {"status" ,"filling fast" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "04" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "05" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "06" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "07" },
+        { "style", "white" },
+        {"status" ,"available" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "08" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "09" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "10" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "Election Day" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "11" },
+        { "style", "grey" },
+        {"status" ,"filling fast" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "12" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "13" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "14" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "Black Day" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "15" },
+        { "style", "white" },
+        {"status" ,"filling fast" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "16" },
+        { "style", "white" },
+        {"status" ,"available" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "17" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "18" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "19" },
+        { "style", "white" },
+        {"status" ,"filling fast" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "20" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "21" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "Leave" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "22" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "23" },
+        { "style", "gradient" },
+        {"status" ,"filling fast" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "24" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "25" },
+        { "style", "white" },
+        {"status" ,"available" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "26" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "27" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "28" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "29" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "30" },
+        { "style", "white" },
+        {"status" ,"available" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "31" },
+        { "style", "white" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "01" },
+        { "style", "grey" },
+        {"status" ,"" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "02" },
+        { "style", "grey" },
+        {"status" ,"" },
+        {"desc", "" }
+        };
+    cellList.Add(cell); cell = new Dictionary<string, string>{
+        { "day", "03" },
+        { "style", "grey" },
+        {"status" ,"filled" },
+        {"desc", "" }
+        };
+    cellList.Add(cell);
+
+    int[] available = { 2, 5, 8 };
+    }
+    <div class="calendar_section">
+        <div class="calendar_header">
+            <div class="calendar_header_month">
+                November
             </div>
+            <div class="calendar_header_year">
+                <select>
+                    <option>2018</option>
+                    <option>2019</option>
+                </select>
+            </div>
+        </div>
+        <div class="calendar_days">
+            @foreach (var day in days)
+            {
+                <div class="calendar_days_individual"> @day </div>
+            }
+        </div>
+        <div class="calendar_dates">
+            @for (var i = 0; i < cellList.Count;)
+            {
+                <div class="calendar_dates_row">
+                    @for (var j = 1; j < 8 && i < cellList.Count; j++, i++)
+                    {
+                        var stylingClass = cellList[i]["style"];
+                        if((j > 5 || cellList[i]["desc"] != "") && stylingClass != "gradient")
+                        {
+                            stylingClass = "grey";
+                        }
+                        <div class="calendar_days_individual_date @Html.Raw(stylingClass+"_background")">
+                            @cellList[i]["day"]
+
+                        @if (@cellList[i]["status"] != "" && (j <= 5) && cellList[i]["desc"] == "")
+                        {
+                            var img_url = @cellList[i]["status"].ToString().Replace(' ', '_').ToLower() + ".png";
+                            <img src="~/images/@img_url" class="calendar_cell_img" />
+                        }
+                        @if(@cellList[i]["desc"] != "")
+                        {
+                            <label class="calendar_cell_desc">@cellList[i]["desc"]</label>
+                        }
+                    </div>
+                }
+                </div>
+            }
+        </div>
+        <div class="calendar_legends">
+            <img class="calendar_legends_img" src="~/images/available.png" /><label class="calendar_legends_label">Available</label>
+            <img class="calendar_legends_img" src="~/images/filling_fast.png" /><label class="calendar_legends_label">Filling Fast</label>
+            <img class="calendar_legends_img" src="~/images/filled.png" /><label class="calendar_legends_label">Full</label>
+        </div>
+    </div>
+    @*
+        @functions {
+
+        string find(int[] type, int d)
+        {
+            foreach(int i in type)
+            {
+                if (i == 5)
+                {
+                    return "full";
+                }
+            }
+            return "";
         }
-    </div>
-    <div class="calendar_legends">
-        <img class="calendar_legends_img" src="~/images/available.png" /><label class="calendar_legends_label">Available</label>
-        <img class="calendar_legends_img" src="~/images/filling_fast.png" /><label class="calendar_legends_label">Filling Fast</label>
-        <img class="calendar_legends_img" src="~/images/full.png" /><label class="calendar_legends_label">Full</label>
-    </div>
-</div>
+        string dateCheck(int d)
+        {
+            int[] available = { 2, 7, 15 };
+            int[] full = { 11, 18, 25 };
+            string status;
+            status = find(available, d);
+            status = find(full, d);
+            if (status == "")
+            {
+                status = "normal";
+            }
+            return status;
+        }
+        }*@

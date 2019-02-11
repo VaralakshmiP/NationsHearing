@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using NationsHearing.Models;
+using Newtonsoft.Json.Serialization;
 
 namespace NationsHearing
 {
@@ -34,7 +35,11 @@ namespace NationsHearing
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
+
+            // Add Kendo UI services to the services container
+            services.AddKendo();
 
             services.AddDbContext<NationsHearingContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("NationsHearingContext")));
