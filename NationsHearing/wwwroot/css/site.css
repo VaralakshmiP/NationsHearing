@@ -49,13 +49,13 @@ select {
     font-size: 16px;
 }
 
-.header_logo {
-    width: 100px;
-    height: 42px;
-    border-right: 1px solid #b2b2b2;
+    .header_logo {
+        width: 100px;
+        height: 42px;
+        border-right: 1px solid #b2b2b2;
     font-size: 18px;
     line-height: 1;
-}
+    }
 
 .header_menu {
     display: flex;
@@ -183,9 +183,56 @@ select {
     font-size: 12px;
     position: absolute;
     bottom: 3px;
-    right: 10px;
+    text-align: center;
     font-weight: 300;
 }
+.remaining{
+    position : absolute;
+    bottom : 0px;
+    right: 0px;
+}
+.available_remaining {
+    color: rgba(45, 176, 160, 0.6);
+    position: relative;
+    bottom: 24px;
+    right: 10px;
+    /* font-size: 14px; */
+    font-weight: 600;
+    line-height: 16px;
+    width: 13px;
+    text-align: center;
+}
+    .available_remaining::after {
+        content: "";
+        height: 2px;
+        width: 12px;
+        background-color: rgba(45, 176, 160, 0.6);
+        position: absolute;
+        padding: to;
+        bottom: -4px;
+        right: 0px;
+    }
+.filling_fast_remaining {
+    color: rgba(240, 129, 30, 0.6);
+    position: relative;
+    bottom: 24px;
+    right: 10px;
+    /* font-size: 14px; */
+    font-weight: 600;
+    line-height: 16px;
+    width: 13px;
+    text-align: center;
+}
+    .filling_fast_remaining::after {
+        content: "";
+        height: 2px;
+        width: 12px;
+        background-color: rgba(240, 129, 30, 0.6);
+        position: absolute;
+        padding: to;
+        bottom: -4px;
+        right: 0px;
+    }
 .schedule_section {
     margin-left: 40px;
     /* width: calc(100vw - (100%/2) - 40px); */
@@ -227,6 +274,10 @@ select {
 .schedule_section_body__individual_appointment-lunch {
     color: #a19f9f;
     font-size: 14px;
+    position: absolute;
+    bottom: 0px;
+    line-height: 14px;
+    width: 50px;
 }
 .schedule_section_body__individual {
     /*height: 108px;*/
@@ -316,11 +367,7 @@ label {
 
 .tips_suggestions_section {
     border-radius: 5px;
-    background: -webkit-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
-    background: -moz-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
-    background: -o-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
-    background: -ms-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
-    background: linear-gradient(0deg, #30a498 0%, #22d4ba 100%);
+    background: linear-gradient(0deg, #49A99A 0%, #4BB6A4 33%, #4CB9A6 44%,#22d4ba 100%);
     width: 50%;
     min-width: 50%;
     height: 362px;
@@ -331,7 +378,7 @@ label {
 
 .tips_suggestions_img {
     position: absolute;
-    bottom: -10px;
+    bottom: 0px;
     right: 0px;
 }
 
@@ -344,6 +391,7 @@ label {
 .clinic_statistics_header {
     padding: 20px 0px 0px 20px;
     margin-bottom: 35px;
+    display: flex;
 }
 
 .clinic_statistics_header_label {
@@ -414,7 +462,7 @@ label {
 .news_new_product {
     border-radius: 5px;
     background-color: #ffffff;
-    width: 211px;
+    width: calc((100%)/3);
     height: 176px;
     display: flex;
     flex-direction: column;
@@ -431,7 +479,7 @@ label {
 .news_available {
     border-radius: 5px;
     background-color: #ffffff;
-    width: 205px;
+    width: calc((100%)/3);
     height: 176px;
     margin-left: 10px;
     padding-left: 14px;
@@ -441,9 +489,10 @@ label {
 .news_section {
     display: flex;
     flex-direction: column;
-    /* margin-right: 46px; */
+    padding-right: 46px;
     flex: auto;
-    margin-left: 20px;
+    padding-left: 20px;
+    width: calc((100%)/3);
 }
 
 .news_section_header {
