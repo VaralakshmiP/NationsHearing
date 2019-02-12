@@ -42,10 +42,6 @@ body {
 }
 
 select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
     border: none;
     border-bottom: 1px solid #b2b2be;
     outline: none;
@@ -57,6 +53,8 @@ select {
     width: 100px;
     height: 42px;
     border-right: 1px solid #b2b2b2;
+    font-size: 18px;
+    line-height: 1;
 }
 
 .header_menu {
@@ -97,7 +95,7 @@ select {
     width: 50%;
     min-width: 50%;
     background: #ffffff;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .calendar_header {
@@ -198,6 +196,7 @@ select {
 .schedule_section_title {
     color: #1f1f20;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .schedule_section_body {
@@ -205,6 +204,11 @@ select {
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 140px);
+    grid-row-gap: 0rem;
+    grid-column-gap: 1rem;
+    justify-content: space-between;
 }
 .schedule_section_body__individual_time-free {
     color: #3c3c3c;
@@ -437,15 +441,16 @@ label {
 .news_section {
     display: flex;
     flex-direction: column;
-    margin-right: 46px;
+    /* margin-right: 46px; */
+    flex: auto;
     margin-left: 20px;
 }
 
 .news_section_header {
     color: #444343;
     font-size: 26px;
-    width: 91px;
-    height: 71px;
+    /*width: 91px;
+    height: 71px */
     margin-top: 27px;
     line-height: 26px;
 }
@@ -546,6 +551,11 @@ label {
     flex-wrap: wrap;
 }
 
+.logo--red{
+    color: red;
+    font-weight: 800;
+}
+
 @media (max-width: 1200px) {
     .calendar_section {
         min-width: 100%;
@@ -571,3 +581,4 @@ label {
         min-width: 100%;
     }
 }
+

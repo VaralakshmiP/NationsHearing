@@ -30,5 +30,11 @@ namespace NationsHearing.Controllers
         {
             ViewBag.option = data;
         }
+
+        [HttpGet]
+        public IActionResult clinicResult(String selectedValue) {
+
+            return PartialView("_ClinicStatistics");
+        }
     }
 }

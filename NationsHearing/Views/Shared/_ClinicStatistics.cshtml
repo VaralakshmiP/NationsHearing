@@ -70,10 +70,13 @@
     // assuming you're using jQuery
     $("#selectOption").change(function (event) {
         $.ajax({
-            url: "Home/SelectedOption/" + $(this).val(),
+            url: "Home/clinicResult/",
             data: { id : $(this).val() /* add other additional parameters */ },
             cache: false,
-            type: "POST",
+            type: "GET",
+            success: function (response) {
+                $('.clinic-statistics-wrapper').html(response);
+            }
         });
         console.log(event, $(this).val());
     });
