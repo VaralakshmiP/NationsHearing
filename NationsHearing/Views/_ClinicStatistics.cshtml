@@ -2,8 +2,7 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewBag.option = "thisWeek";
-List<Dictionary<string, string>> thisWeek = new List<Dictionary<string, string>>();
+    List<Dictionary<string, string>> thisWeek = new List<Dictionary<string, string>>();
     thisWeek.Add(new Dictionary<string, string>{
         {"stat_value", "24" },
         {"stat_category", "Testing Appointments" }
@@ -33,24 +32,28 @@ List<Dictionary<string, string>> thisWeek = new List<Dictionary<string, string>>
 <div class="clinic_statistics">
     <div class="clinic_statistics_header">
         <label class="clinic_statistics_header_label">Clinic Stats</label>
-        @using (Html.BeginForm("SelectedOption", "Home"))
-        {
-        <select class="clinic_statistics_header_select">
+        @* @using (Html.BeginForm("SelectedOption", "Home"))
+        {*@
+        <select class="clinic_statistics_header_select" id="selectOption">
             <option value="thisWeek">This Week</option>
             <option value="lastWeek">Last Week</option>
         </select>
-        }
+        @*}*@
     </div>
     <div class="clinic_statistics_body">
         @{
             List<Dictionary<string, string>> display = new List<Dictionary<string, string>>();
-            if (ViewBag.option.ToString() == "lastweek")
-            {
-                display = lastWeek;
-            }
-            else if (ViewBag.option.ToString() == "thisWeek")
+            if (@ViewBag.option == null)
             {
                 display = thisWeek;
+            }
+            else if (@ViewBag.option.ToString() == "thisWeek")
+            {
+                display = thisWeek;
+            }
+            else if (@ViewBag.option.ToString() == "lastWeek")
+            {
+                display = lastWeek;
             }
         }
         @for (var i = 0; i < 3; i++)
@@ -62,3 +65,16 @@ List<Dictionary<string, string>> thisWeek = new List<Dictionary<string, string>>
         }
     </div>
 </div>
+
+<script type="text/javascript">
+    // assuming you're using jQuery
+    $("#selectOption").change(function (event) {
+        $.ajax({
+            url: "Home/SelectedOption/" + $(this).val(),
+            data: { id : $(this).val() /* add other additional parameters */ },
+            cache: false,
+            type: "POST",
+        });
+        console.log(event, $(this).val());
+    });
+</script>

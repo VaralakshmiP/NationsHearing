@@ -26,9 +26,9 @@ namespace NationsHearing.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public void SelectedOption()
+        public void SelectedOption(object data)
         {
-            ViewBag.option = "lastWeek";
+            ViewBag.option = data;
         }
     }
 }
