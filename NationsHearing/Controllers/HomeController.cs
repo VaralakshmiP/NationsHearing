@@ -26,7 +26,7 @@ namespace NationsHearing.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public void SelectedOption(object data)
+        public void SelectedOption(string data)
         {
             ViewBag.option = data;
         }
