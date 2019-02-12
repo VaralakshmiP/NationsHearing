@@ -8,6 +8,7 @@ html {
 
 body {
     /* Margin bottom by footer height */
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .footer {
