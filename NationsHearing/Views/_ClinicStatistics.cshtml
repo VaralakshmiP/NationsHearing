@@ -1,21 +1,64 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@{
+    ViewBag.option = "thisWeek";
+List<Dictionary<string, string>> thisWeek = new List<Dictionary<string, string>>();
+    thisWeek.Add(new Dictionary<string, string>{
+        {"stat_value", "24" },
+        {"stat_category", "Testing Appointments" }
+    });
+    thisWeek.Add(new Dictionary<string, string>{
+        {"stat_value", "13" },
+        {"stat_category", "Fittings Appointments" }
+    });
+    thisWeek.Add(new Dictionary<string, string>{
+        {"stat_value", "$36,000" },
+        {"stat_category", "Total Income" }
+    });
+    List<Dictionary<string, string>> lastWeek = new List<Dictionary<string, string>>();
+    lastWeek.Add(new Dictionary<string, string>{
+        {"stat_value", "16" },
+        {"stat_category", "Testing Appointments" }
+    });
+    lastWeek.Add(new Dictionary<string, string>{
+        {"stat_value", "22" },
+        {"stat_category", "Fittings Appointments" }
+    });
+    lastWeek.Add(new Dictionary<string, string>{
+        {"stat_value", "$26,000" },
+        {"stat_category", "Total Income" }
+    });
+}
 <div class="clinic_statistics">
     <div class="clinic_statistics_header">
         <label class="clinic_statistics_header_label">Clinic Stats</label>
+        @using (Html.BeginForm("SelectedOption", "Home"))
+        {
         <select class="clinic_statistics_header_select">
-            <option>This Week</option>
-            <option>Last Week</option>
+            <option value="thisWeek">This Week</option>
+            <option value="lastWeek">Last Week</option>
         </select>
+        }
     </div>
     <div class="clinic_statistics_body">
-        @for ( var i =1; i<=3; i++)
+        @{
+            List<Dictionary<string, string>> display = new List<Dictionary<string, string>>();
+            if (ViewBag.option.ToString() == "lastweek")
+            {
+                display = lastWeek;
+            }
+            else if (ViewBag.option.ToString() == "thisWeek")
+            {
+                display = thisWeek;
+            }
+        }
+        @for (var i = 0; i < 3; i++)
         {
-        <div class="clinic_statistics_body_individual">
-            <label class="clinic_statistics_body_individual_number">20</label>
-            <label class="clinic_statistics_body_individual_type">Testing Appointments</label>
-        </div>
+            <div class="clinic_statistics_body_individual">
+                <label class="clinic_statistics_body_individual_number">@display[i]["stat_value"]</label>
+                <label class="clinic_statistics_body_individual_type">@display[i]["stat_category"]</label>
+            </div>
         }
     </div>
 </div>

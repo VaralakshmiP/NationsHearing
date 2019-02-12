@@ -328,6 +328,7 @@ label {
 .clinic_statistics_header {
     padding: 20px 0px 0px 20px;
     margin-bottom: 35px;
+    display : flex;
 }
 
 .clinic_statistics_header_label {
@@ -378,6 +379,9 @@ label {
 
 .clinic_statistics_body_individual_type {
     color: #1f1f20;
+    width : 50px;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .statics_updates {
