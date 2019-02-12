@@ -9,6 +9,8 @@ html {
 body {
     /* Margin bottom by footer height */
     font-family: 'Source Sans Pro', sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .footer {
@@ -88,10 +90,12 @@ select {
     padding-top: 20px;
     background: rgb(243, 243, 244);
     margin-top: 10px;
+    padding-right: 25px;
 }
 
 .calendar_section {
-    width: 654px;
+    width: 50%;
+    min-width: 50%;
     background: #ffffff;
     margin-top: 15px;
 }
@@ -127,15 +131,18 @@ select {
 }
 
 .calendar_days_individual_date {
-    width: calc(100%/7);
+    width: calc(100% / 7);
+    height: 0px;
     border-right: 1px solid rgba(198, 198, 198, 0.5);
     border-bottom: 1px solid rgba(198, 198, 198, 0.5);
-    padding: 9px 0px 0px 9px;
-    position : relative;
+    /* padding: 9px 0px 0px 9px */
+    position: relative;
+    padding-bottom: calc(100% / 7);
+    padding-left: 9px;
 }
 
 .calendar_dates {
-    height: 457px;
+    /* height: 457px; */
     display: flex;
     flex-direction: column;
     margin: 2px 22px 0px;
@@ -147,7 +154,7 @@ select {
 .calendar_dates_row {
     display: flex;
     flex-direction: row;
-    height: calc(100%/5);
+    /* height: calc(100%/5); */
 }
 
     .calendar_dates_row :last-child {
@@ -179,10 +186,13 @@ select {
     position: absolute;
     bottom: 3px;
     right: 10px;
+    font-weight: 300;
 }
 .schedule_section {
     margin-left: 40px;
-    width: calc(100vw - (100%/2) - 40px);
+    /* width: calc(100vw - (100%/2) - 40px); */
+    width: calc(50% - 40px);
+    min-width: calc(50% - 40px);
 }
 
 .schedule_section_title {
@@ -307,7 +317,8 @@ label {
     background: -o-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
     background: -ms-linear-gradient(90deg, #30a498 0%, #22d4ba 100%);
     background: linear-gradient(0deg, #30a498 0%, #22d4ba 100%);
-    width: 650px;
+    width: 50%;
+    min-width: 50%;
     height: 362px;
     margin-top: 28px;
     position: relative;
@@ -386,6 +397,8 @@ label {
     flex-direction: column;
     margin-top: 28px;
     margin-left: 21px;
+    width: calc(50% - 21px);
+    min-width: calc(50% - 21px);
 }
 
 .news {
@@ -524,4 +537,37 @@ label {
     border: none;
     outline: none;
     color: #ffffff;
+}
+
+
+.body_section__top{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+    .calendar_section {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .schedule_section{
+        min-width: 100%;
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+
+    .statics_updates {
+        margin-left: 0px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+
+    .tips_suggestions_section{
+        width: 100%;
+        min-width: 100%;
+    }
 }
