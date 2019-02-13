@@ -298,7 +298,7 @@
                                 var img_url = "";
                                 if (@cellList[i]["style"].ToString().Replace(' ', '_').ToLower() != "gradient")
                                 {
-                                    img_url  = @cellList[i]["status"].ToString().Replace(' ', '_').ToLower() +".png";
+                                    img_url = @cellList[i]["status"].ToString().Replace(' ', '_').ToLower() + ".png";
                                 }
                                 else
                                 {
@@ -310,7 +310,9 @@
                         </div>
                         @if (@cellList[i]["desc"] != "")
                         {
-                            <label class="calendar_cell_desc">@cellList[i]["desc"]</label>
+                            <div>
+                                <label class="calendar_cell_desc">@cellList[i]["desc"]</label>
+                            </div>
                         }
                     </div>
                 }

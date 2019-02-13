@@ -85,7 +85,6 @@ select {
 .main_container {
     padding-left: 25px;
     padding-bottom: 33px;
-    padding-top: 20px;
     background: rgb(243, 243, 244);
     margin-top: 10px;
     padding-right: 25px;
@@ -95,7 +94,7 @@ select {
     width: 50%;
     min-width: 50%;
     background: #ffffff;
-    /* margin-top: 15px; */
+    margin-top: 20px;
 }
 
 .calendar_header {
@@ -139,6 +138,7 @@ select {
     position: relative;
     padding-bottom: calc(100% / 7);
     padding-left: 9px;
+    display : flex;
 }
 
 .calendar_dates {
@@ -167,6 +167,8 @@ select {
 .grey_background {
     background: rgb(247, 247, 247);
     color: #797979;
+    display: flex;
+    flex-direction: column;
 }
 .gradient_background {
     color : #ffffff;
@@ -253,6 +255,7 @@ select {
     /* width: calc(100vw - (100%/2) - 40px); */
     width: calc(50% - 40px);
     min-width: calc(50% - 40px);
+    margin-top: 10px;
 }
 
 .schedule_section_title {
@@ -284,8 +287,8 @@ select {
         width: 28px;
         background-color: rgba(45, 176, 160, 0.6);
         position: absolute;
-        bottom: -1px;
-        left: 2px;
+        bottom: -6px;
+        left: 0px;
     }
 .schedule_section_body__individual_appointment-lunch {
     color: #a19f9f;
@@ -301,6 +304,7 @@ select {
     margin-bottom: 40px;
     position: relative;
     padding-left: 10px;
+    line-height : 1;
 }
 
     .schedule_section_body__individual::before {
@@ -328,10 +332,9 @@ label {
         height: 5px;
         width: 28px;
         background-color: rgba(244, 91, 60, 0.6);
-        background-color: rgba(244, 91, 60, 0.6);
         position: absolute;
-        bottom: -1px;
-        left: 2px;
+        bottom: -6px;
+        left: 0px;
     }
 
 .schedule_section_body__individual_name {
@@ -461,6 +464,9 @@ label {
 
 .clinic_statistics_body_individual_type {
     color: #1f1f20;
+    font-size: 14px;
+    line-height: 16px;
+    width: 84px;
 }
 
 .statics_updates {
@@ -481,7 +487,7 @@ label {
 .news_new_product {
     border-radius: 5px;
     background-color: #ffffff;
-    width: calc((100%)/3);
+    width: 40%;
     height: 176px;
     display: flex;
     flex-direction: column;
@@ -498,20 +504,21 @@ label {
 .news_available {
     border-radius: 5px;
     background-color: #ffffff;
-    width: calc((100%)/3);
+    width: 40%;
     height: 176px;
     margin-left: 10px;
     padding-left: 14px;
     padding-top: 35px;
+    padding-right: 20px;
 }
 
 .news_section {
     display: flex;
     flex-direction: column;
-    padding-right: 46px;
+    margin-right: 10px;
     flex: auto;
     padding-left: 20px;
-    width: calc((100%)/3);
+    width: 20%;
 }
 
 .news_section_header {
@@ -521,6 +528,7 @@ label {
     height: 71px */
     margin-top: 27px;
     line-height: 26px;
+    font-weight: 600;
 }
 
 .news_section_view_all {
