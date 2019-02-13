@@ -100,8 +100,9 @@ select {
 
 .calendar_header {
     margin-top: 16px;
-    padding-left: 23px;
-    display: flex
+    padding-left: 30px;
+    display: flex;
+    margin-bottom: 12px;
 }
 
 .calendar_header_month {
@@ -126,6 +127,7 @@ select {
 .calendar_days_individual {
     width: calc(100%/7);
     text-transform: capitalize;
+    padding-left: 10px;
 }
 
 .calendar_days_individual_date {
@@ -167,16 +169,30 @@ select {
     color: #797979;
 }
 .gradient_background {
+    color : #ffffff;
     background: -webkit-linear-gradient(55.18deg, #f7943c 0%, #f7c93c 100%);
     background: -moz-linear-gradient(55.18deg, #f7943c 0%, #f7c93c 100%);
     background: -o-linear-gradient(55.18deg, #f7943c 0%, #f7c93c 100%);
     background: -ms-linear-gradient(55.18deg, #f7943c 0%, #f7c93c 100%);
     background: linear-gradient(34.82deg, #f7943c 0%, #f7c93c 100%);
 }
+.gradient_style{
+    color : #ffffff !important;
+}
+    .gradient_style::after {
+        content: "";
+        height: 2px;
+        width: 12px;
+        background-color: #ffffff !important;
+        position: absolute;
+        bottom: -4px;
+        right: 0px;
+    }
 .calendar_cell_img {
     position: absolute;
     bottom: 10px;
     right: 10px;
+    opacity: 0.9;
 }
 .calendar_cell_desc {
     color: #3e3e3e;
@@ -184,7 +200,8 @@ select {
     position: absolute;
     bottom: 3px;
     text-align: center;
-    font-weight: 300;
+    font-weight: 600;
+    opacity: 0.6;
 }
 .remaining{
     position : absolute;
@@ -208,7 +225,6 @@ select {
         width: 12px;
         background-color: rgba(45, 176, 160, 0.6);
         position: absolute;
-        padding: to;
         bottom: -4px;
         right: 0px;
     }
@@ -229,7 +245,6 @@ select {
         width: 12px;
         background-color: rgba(240, 129, 30, 0.6);
         position: absolute;
-        padding: to;
         bottom: -4px;
         right: 0px;
     }
@@ -244,6 +259,7 @@ select {
     color: #1f1f20;
     font-size: 20px;
     margin-bottom: 20px;
+    font-weight : 600;
 }
 
 .schedule_section_body {
@@ -304,6 +320,7 @@ label {
     color: #3c3c3c;
     font-size: 13px;
     position: relative;
+    font-weight : 600;
 }
 
     .schedule_section_body__individual_time::after {
@@ -342,6 +359,8 @@ label {
 
 .schedule_section_body__individual_appointment {
     color: #1868df;
+    line-height: 14px;
+    width: 50px;
 }
 
 .schedule_section_body__individual_newappointment {
@@ -629,5 +648,9 @@ label {
         width: 100%;
         min-width: 100%;
     }
+}
+button {
+    outline : none;
+    cursor : pointer;
 }
 

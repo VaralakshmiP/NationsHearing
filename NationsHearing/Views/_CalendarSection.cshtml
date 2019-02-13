@@ -2,7 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    string[] days = { "sun", "mon", "tue", "wed", "thurs", "fri", "sat" };
+    string[] days = { "mon", "tue", "wed", "thurs", "fri", "sat", "sun" };
 
     List<Dictionary<string, string>> cellList = new List<Dictionary<string, string>>();
     Dictionary<string, string> cell = new Dictionary<string, string>{
@@ -293,11 +293,18 @@
                             {
                                 if (@cellList[i]["remaining"] != "")
                                 {
-                                    
-                                        <label class="@Html.Raw(cellList[i]["status"].ToString().Replace(' ', '_').ToLower()+"_remaining")">@cellList[i]["remaining"]</label>
-                                    
+                                    <label class="@Html.Raw(cellList[i]["status"].ToString().Replace(' ', '_').ToLower()+"_remaining") @Html.Raw(cellList[i]["style"].ToString().Replace(' ', '_').ToLower()+"_style")">@cellList[i]["remaining"]</label>
                                 }
-                                var img_url = @cellList[i]["status"].ToString().Replace(' ', '_').ToLower() + ".png";
+                                var img_url = "";
+                                if (@cellList[i]["style"].ToString().Replace(' ', '_').ToLower() != "gradient")
+                                {
+                                    img_url  = @cellList[i]["status"].ToString().Replace(' ', '_').ToLower() +".png";
+                                }
+                                else
+                                {
+                                    img_url = "gradient_calender.png";
+
+                                }
                                 <img src="~/images/@img_url" class="calendar_cell_img" />
                             }
                         </div>

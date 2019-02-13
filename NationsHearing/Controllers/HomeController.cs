@@ -12,6 +12,7 @@ namespace NationsHearing.Controllers
     {
         public IActionResult Index()
         {
+       // ViewBag.option = "thisWeek";
             return View();
         }
 
@@ -28,12 +29,12 @@ namespace NationsHearing.Controllers
 
         public void SelectedOption(string data)
         {
-            ViewBag.option = data;
+            ViewData["option"] = data;
+            
         }
-
         [HttpGet]
-        public IActionResult clinicResult(String selectedValue) {
-
+        public IActionResult clinicResult(string selectedValue) {
+            ViewBag.option = selectedValue;
             return PartialView("_ClinicStatistics");
         }
     }
