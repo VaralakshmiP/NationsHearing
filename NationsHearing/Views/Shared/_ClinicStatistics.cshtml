@@ -66,20 +66,3 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    // assuming you're using jQuery
-    $("#selectOption").change(function (event) {
-        $.ajax({
-            url: "Home/clinicResult/" + $(this).val(),
-            data: { selectedValue : $(this).val() /* add other additional parameters */ },
-            cache: false,
-            type: "GET",
-            success: function (response) {
-                $('.clinic-statistics-wrapper').html(response);
-                var ele = $("#selectOption");
-                ele[0].value = data;
-            }
-        });
-        var data = $(this).val();
-    });
-</script>

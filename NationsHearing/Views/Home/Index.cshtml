@@ -13,3 +13,21 @@
         <partial name="~/Views/_News.cshtml" />
     </div>
 </div>
+
+<script type="text/javascript">
+    // assuming you're using jQuery
+    $(document.body).on('change', "#selectOption", function (event) {
+        var selectedValue = $(this).val();
+        $.ajax({
+            url: "Home/clinicResult/" + selectedValue,
+            data: { selectedValue: selectedValue /* add other additional parameters */ },
+            cache: false,
+            type: "GET",
+            success: function (response) {
+                $('.clinic-statistics-wrapper').html(response);
+                var ele = $("#selectOption");
+                ele[0].value = selectedValue;
+            }
+        });
+    });
+</script>
