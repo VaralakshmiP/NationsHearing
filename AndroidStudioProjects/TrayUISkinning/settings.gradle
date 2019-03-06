@@ -1,0 +1,3 @@
+include ':tray-lib-android-studio'
+project(':tray-lib-android-studio').projectDir = new File(settingsDir, '../tray-lib-android-studio')
+include ':tray-android-studio'
